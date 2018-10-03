@@ -5,6 +5,7 @@ firebase.auth().onAuthStateChanged(function (user) {
             var ic = (snapshot.val() && snapshot.val().ic) || 'Anonymous';
             var contactNum = (snapshot.val() && snapshot.val().contactNumber) || 'Anonymous';
             var email = user.email;
+            
             //alert(fullName + " " + ic + " "+ contactNum+ " "+ address);
 
             $("#fullName").text(fullName);

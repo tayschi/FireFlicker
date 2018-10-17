@@ -25,6 +25,10 @@ body{
     color: rgb(196, 107, 107);
 }
 
+.header btn{
+    color: rgb(230,230,230);
+}
+
 .headerR{
     padding-top: 7px;
     padding-right: 50px;

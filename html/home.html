@@ -8,35 +8,174 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
     <script src="../js/firebase.js"></script>
     <script src="../js/home.js"></script>
 </head>
 
 <body>
-    <!-- Tab links -->
-    <div>
-        <ul class="menu">
-            <li><a href="">Create Account / Sign In</a></li>
-            <li><a href="userInfo.html">Manage Info</a></li>
-            <li><a href="" onclick="logOut()">Log Out</a></li>
-        </ul>
-    </div>
-    <div class="topnav">
-        <a class="active" href="">Home</a>
-        <a href="">Product</a>
-        <a href="">Test Only</a>
-        <input type="text" placeholder="Search..">
+
+    <!-- Header -->
+    <div class="header" id="about">
+        <input type="text" placeholder="Search Product">
+        <button class="btn">
+            <i class="fas fa-search"></i>
+        </button>
+        <div class="headerR">
+            <a>TEST</a>
+            <!-- User Data Script-->
+        </div>
     </div>
 
+    <div class="logo">
+        <div class="logoBar">
+            <img class="img" src="../CompAsset/Logo/myLogo3.png" alt="">
+        </div>
+
+        <div class="logoSub">
+            <h1>Our Story</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s.</p>
+        </div>
+    </div>
+
+    <!-- Top Nav -->
+    <div class="topnav">
+        <div class="topnavSub">
+            <a href="#about">About</a>
+            <a href="#product">Product</a>
+            <a href="#articles">Article</a>
+            <a href="#services">Service</a>
+            <a href="#footer">Contact Us</a>
+        </div>
+    </div>
+
+
+
+    <!-- Content -->
+    <section id="product">
+        <div class="container">
+            <h2>Products</h2>
+            <p>Top Selling Products</p>
+            <div class="productImageHeader">
+                <div class="productCard">
+                    <img src="../CompAsset/Product/MED Stored Pressure Portable Dry Powder Fire Extinguisher 12kg (ABC).jpg" alt="">
+                    <p>MED Stored Pressure Portable Dry Powder Fire Extinguisher 12kg (ABC)</p>
+                    <p>RM300.00</p>
+                </div>
+                <div class="productCard">
+                    <img src="../CompAsset/Product/MED CO2 Stored Pressure Mobile Fire Extinguishers Double 10kg.jpg" alt="">
+                    <p>MED CO2 Stored Pressure Mobile Fire Extinguishers Double 10kg</p>
+                    <p>RM250.00</p>
+                </div>
+                <div class="productCard">
+                    <img src="../CompAsset/Product/ABC CARTRIDGE OPERATION PORTABLE FIRE EXTINGUISHER 12kg.PNG" alt="">
+                    <p>ABC CARTRIDGE OPERATION PORTABLE FIRE EXTINGUISHER 12kg</p>
+                    <p>RM320.00</p>
+                </div>
+                <div class="productCard">
+                    <img src="../CompAsset/Product/ABC_MONNEX POWDER CARTRIDGE OPERATION PORTABLE FIRE EXTINGUISHER 12kg.PNG" alt="">
+                    <p>ABC MONNEX POWDER CARTRIDGE OPERATION PORTABLE FIRE EXTINGUISHER 12kg</p>
+                    <p>RM350.00</p>
+                </div>
+                <div class="productCard">
+                    <img src="../CompAsset/Product/ABC_MONNEX POWDER CARTRIDGE OPERATION PORTABLE FIRE EXTINGUISHER 12kg.PNG" alt="">
+                    <p>ABC MONNEX POWDER CARTRIDGE OPERATION PORTABLE FIRE EXTINGUISHER 12kg</p>
+                    <p>RM350.00</p>
+                </div>
+                <div class="more">
+                    <a href="#">
+                        <img src="../CompAsset/Logo/more-horizontal.svg" alt="more logo">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="articles">
+        <div class="container">
+            <h2>Articles</h2>
+            <p>Latest Articles</p>
+            <div class="productImageHeader">
+                <div class="newsCard">
+                    <a href="#">
+                        <img src="../CompAsset/News/fire-2775219_640.jpg" alt="news img">
+                    </a>
+                </div>
+                <div class="newsCard">
+                    <a href="#">
+                        <img src="../CompAsset/News/fire-extinguisher-970162_640.jpg" alt="news img">
+                    </a>
+                </div>
+                <div class="newsCard">
+                    <a href="#">
+                        <img src="../CompAsset/News/fire-protection-3593033_640.jpg" alt="news img">
+                    </a>
+                </div>
+                <div class="newsCard">
+                    <a href="#">
+                        <img src="../CompAsset/News/firefighters-115800_640.jpg" alt="news img">
+                    </a>
+                </div>
+                <div class="moreNews">
+                    <a href="news.html">
+                        <img src="../CompAsset/Logo/more-horizontal.svg" alt="more logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services">
+        <div class="container">
+            <h2>Services</h2>
+            <div class="cen">
+                <div class="service">
+                    <i class="fas fa-sync-alt"></i>
+                    <h2>Trade In</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+
+                <div class="service">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h2>Maintenance</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+
+                <div class="service">
+                    <i class="fas fa-truck"></i>
+                    <h2>Delivery</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </body>
-<footer>
-    <div id="About Us">
-        <p>About Us</p>
-        <p id="aboutUsContent"></p>
-        <p id="emailContent"></p>
-        <p id="phoneContent"></p>
-        <p id="faxContent"></p>
+<footer id="footer">
+    <div class="container">
+
+        <div class="grid-container">
+            <div class="grid-item">
+                <h3>LOCATION</h3>
+                <p>Universiti Sains Malaysia
+                    <br> 11800 Penang Malaysia</p>
+            </div>
+            <div class="grid-item">
+                <h3>CONTACT US</h3>
+                <p>Tel: +603-5374896</p>
+                <p>Fax: +603-5377777</p>
+                <p>Email: fireflicker@gmail.com</p>
+            </div>
+            <div class="grid-item">
+                <h3>AROUND THE WEB</h3>
+                <p>
+                    <img src="../CompAsset/Logo/facebook.svg" alt="facebook logo">
+                    <img src="../CompAsset/Logo/twitter.svg" alt="twitter logo">
+                    <img src="../CompAsset/Logo/aperture.svg" alt="aperture logo">
+                </p>
+            </div>
+        </div>
     </div>
 </footer>
 

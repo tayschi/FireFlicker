@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Fire Flicker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <link rel="stylesheet" href="../css/productForm.css">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto+Slab" rel="stylesheet">
+
+</head>
+
+<body>
+    <h1>PRODUCT FORM</h1>
+    <div class="add">
+        <div class="file_upload_content">
+            <img src="" alt="Product Image" height="300" width="200" id="product"/>
+        </div>
+        <input type="file" id="choose-file" onchange="showImage.call(this)" hidden="hidden"/>
+        <button type="submit" id="upload">Choose an Image</button>
+        <span id="image-text">No image chosen.</span><br /><br /><br />
+        <script type="text/javascript">
+            const fileBtn = document.getElementById("choose-file");
+            const uploadBtn = document.getElementById("upload");
+            const imgTxt = document.getElementById("image-text");
+
+            uploadBtn.addEventListener("click", function () {
+                fileBtn.click();
+            });
+
+            fileBtn.addEventListener("change", function () {
+                if (fileBtn.value)
+                    imgTxt.innerHTML = fileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+                else
+                    imgTxt.innerHTML = "No image chosen";
+            });
+        </script>
+        <script>
+            function showImage() {
+                if (this.files && this.files[0]) {
+                    var obj = new FileReader();
+                    obj.onload = function (data) {
+                        var image = document.getElementById("product");
+                        image.src = data.target.result;
+                        image.style.display = "block";
+                    }
+                    obj.readAsDataURL(this.files[0]);
+                }
+            }
+        </script>
+        <div class="element">
+            <p>Product ID: <input type="text" id="prodID" /></p><br />
+            <p>Name: <input type="text" id="prodName" /></p><br />
+            <p>Manufacturer: <input type="text" id="manufacturer" /></p><br />
+            <p>Type: <input type="text" id="type" /></p><br />
+            <p>Weight: <input type="number" id="weight" /></p><br />
+            <p>Price: <input type="number" id="price" /></p><br />
+            <p>Quantity: <input type="number" id="quantity" /></p><br />
+        </div>
+        <div class="button">
+            <button type="submit" id="add">ADD</button>
+            <button type="submit" id="update">UPDATE</button>
+        </div>
+    </div>
+
+</body>
+</html>

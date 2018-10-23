@@ -131,6 +131,11 @@ body{
 /*#region Reactive Component*/
 @media only screen and (max-width: 768px) and (min-width: 400px) {
     
+.header input[type = "text"]
+{
+    margin-left: 20px;
+}
+
     .logo{
         margin-bottom: 20px;
     }
